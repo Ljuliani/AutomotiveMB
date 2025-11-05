@@ -1,0 +1,38 @@
+﻿@page
+@model AutomotiveMB.Pages.Client.DeleteClientModel
+@{
+}
+
+<input type="hidden" asp-for="Client.Id" />
+
+<form method="post">
+    <h4> Are you sure you want to delete the customer? </h4>
+
+    <div>
+        <strong>Nombre:</strong>@Model.Client.Nombre
+    </div>
+
+    <div>
+        <strong>Apellido:</strong>@Model.Client.Apellido
+    </div>
+
+    <div>
+        <strong>Dni:</strong>@Model.Client.Dni
+    </div>
+
+    <div>
+        <strong>FechaNacimiento:</strong>@Model.Client.FechaNacimiento
+    </div>
+
+    <div>
+        <strong>Email:</strong>@Model.Client.Email
+    </div>
+
+    <div>
+        <strong>Telefono:</strong>@Model.Client.Telefono
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>

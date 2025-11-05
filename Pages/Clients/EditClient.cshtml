@@ -1,0 +1,38 @@
+﻿@page
+@model AutomotiveMB.Pages.Client.EditClientModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Client.Id" />
+    <input type="hidden" asp-for="Client.Dni" />
+    <input type="hidden" asp-for="Client.FechaNacimiento" />
+
+    <div asp-validation-summary="All"></div>
+
+    <div class="form-group">
+        <label asp-for="Client.Nombre"></label>
+        <input asp-for="Client.Nombre" class="form-control" />
+        <span asp-validation-for="Client.Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Client.Apellido"></label>
+        <input asp-for="Client.Apellido" class="form-control" />
+        <span asp-validation-for="Client.Apellido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Client.Email"></label>
+        <input asp-for="Client.Email" class="form-control" />
+        <span asp-validation-for="Client.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Client.Telefono"></label>
+        <input asp-for="Client.Telefono" class="form-control" />
+        <span asp-validation-for="Client.Telefono" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
