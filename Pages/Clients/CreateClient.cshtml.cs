@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using AutomotiveMB.Models;
 using AutomotiveMB.DataAccess;
 using AutomotiveMB.Services;
 using AutomotiveMB.Helpers;
