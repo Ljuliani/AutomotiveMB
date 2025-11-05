@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AutomotiveMB.Models;
-using AutomotiveMB.DataAAccess;
+using AutomotiveMB.DataAccess;
 using AutomotiveMB.Services;
 using AutomotiveMB.Helpers;
 using AutomotiveMB.Repositories;
 using AutomotiveMB.Data;
-using AutomotiveMB.Pages;
+using AutomotiveMB.Pages.Vehicles;
 
 
 namespace AutomotiveMB.Pages.CreateClient

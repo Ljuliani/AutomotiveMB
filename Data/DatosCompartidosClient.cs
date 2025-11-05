@@ -8,7 +8,7 @@ namespace AutomotiveMB.Data
     {
         public static List<Client> Clients { get; set; } = new();
         private static int ultimoId = 0;
-        public static int ObtenerNuevoId(List<Client> clients)
+        public static int GetNewId(List<Client> clients)
         {
             int maxId = 0;
             foreach (var client in Clients)
