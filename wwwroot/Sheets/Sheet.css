@@ -1,10 +1,14 @@
-﻿#index-section {
+﻿#principal-section {
     background-image: url('../Images/Brend-Cars.png');
-
+    background-size: cover;
 }
 
-#Principal-text {
-    text-align: center;
+h1.Principal-text {
     color: black;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
 }
+p.Text {
+    color: black;
+}
+

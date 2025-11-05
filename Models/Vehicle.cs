@@ -5,7 +5,7 @@ namespace AutomotiveMB.Models
     public class Vehicle
     {
         public int Id { get; set; }
-        [Display(Name = "Model")]]
+        [Display(Name = "Model")]
         [Required(ErrorMessage = "Enter the Model")]
         public string Model { get; set; }
         [Display(Name = "Year")]
