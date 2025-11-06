@@ -28,7 +28,7 @@ namespace AutomotiveMB.Repositories
 
             foreach(var item in lista)
             {
-                var propertyId = typeof(T).GetProperty("id");
+                var propertyId = typeof(T).GetProperty("Id");
                 int id = (int)propertyId.GetValue(item);
                 if(id > maxId)
                 {
@@ -52,7 +52,7 @@ namespace AutomotiveMB.Repositories
 
         private T? SearchInListForId(List<T> lista, int id)
         {
-            var propertyId = typeof(T).GetProperty("id");
+            var propertyId = typeof(T).GetProperty("Id");
 
             foreach (var item in lista)
             {
