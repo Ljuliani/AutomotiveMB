@@ -11,14 +11,14 @@ using AutomotiveMB.Pages.Vehicles;
 
 namespace AutomotiveMB.Pages.ClientCreate
 {
-    public class CreateClientModel : PageModel
+    public class ClientCreateModel : PageModel
     {
         [BindProperty]
         public Client Client { get; set; }
         private readonly ServiceClient service;
-        public CreateClientModel()
+        public ClientCreateModel()
         {
-            IDataAccess<Client> acceso = new DataAccess<Client>("clients)");
+            IDataAccess<Client> acceso = new DataAccess<Client>("clients");
             IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
             service = new ServiceClient(repo);
         }

@@ -17,7 +17,7 @@ namespace AutomotiveMB.Pages.ClientCreate
         private readonly ServiceClient service;
         public DeleteClientModel()
         {
-            IDataAccess<Client> acceso = new DataAccess<Client>("clients)");
+            IDataAccess<Client> acceso = new DataAccess<Client>("clients");
             IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
             service = new ServiceClient(repo);
         }

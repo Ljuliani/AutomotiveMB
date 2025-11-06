@@ -6,9 +6,9 @@ namespace AutomotiveMB.DataAccess
     {
         private string ruta;
 
-        public DataAccess(string NombreArchivo)
+        public DataAccess(string nombreArchivo)
         {
-            ruta = $"Data/{NombreArchivo}.json";
+            ruta = $"Data/{nombreArchivo}.json";
         }
 
         private string ReadTextArchive()

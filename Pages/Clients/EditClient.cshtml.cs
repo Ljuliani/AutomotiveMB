@@ -13,11 +13,11 @@ namespace AutomotiveMB.Pages.ClientCreate
     public class EditClientModel : PageModel
     {
         [BindProperty]
-        public Client? client { get; set; }
+        public Client? Client { get; set; }
         private readonly ServiceClient service;
         public EditClientModel()
         {
-            IDataAccess<Client> acceso = new DataAccess<Client>("clients)");
+            IDataAccess<Client> acceso = new DataAccess<Client>("clients");
             IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
             service = new ServiceClient(repo);
         }
