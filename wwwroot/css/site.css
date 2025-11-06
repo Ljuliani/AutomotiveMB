@@ -26,17 +26,18 @@ body {
     background-size: cover;
 }
 
-h1.Principal-text {
+#text-center {
+    text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, 0.7);
-    display: inline-block;
+
 }
 
 p.Text {
     color: black;
 }
 
-.Subtext {
+#Subtext {
     color: black;
     background-color: rgba(255, 255, 255, 0.7);
     display: inline-block;
