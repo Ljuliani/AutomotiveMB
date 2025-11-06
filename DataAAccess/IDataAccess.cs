@@ -1,4 +1,4 @@
-﻿namespace AutomotiveMB.DataAccess
+﻿namespace AutomotiveMB.DataAAccess
 {
     public interface IDataAccess<T>
     {

@@ -1,4 +1,4 @@
-﻿using AutomotiveMB.DataAccess;
+﻿using AutomotiveMB.DataAAccess;
 using System.Text.Json;
 
 namespace AutomotiveMB.Repositories

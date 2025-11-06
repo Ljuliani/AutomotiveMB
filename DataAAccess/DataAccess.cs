@@ -1,6 +1,7 @@
-﻿using System.Text.Json;
+﻿using AutomotiveMB.Data;
+using System.Text.Json;
 
-namespace AutomotiveMB.DataAccess
+namespace AutomotiveMB.DataAAccess
 {
     public class DataAccess<T> : IDataAccess<T>
     {
