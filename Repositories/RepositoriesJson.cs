@@ -43,7 +43,7 @@ namespace AutomotiveMB.Repositories
             var lista = GetAll();
             int newId = GetNewId(lista);
 
-            var propertyId = typeof(T).GetProperty("id");
+            var propertyId = typeof(T).GetProperty("Id");
             propertyId.SetValue(entidad, newId);
 
             lista.Add(entidad);

@@ -14,11 +14,11 @@ namespace AutomotiveMB.DataAAccess
 
         private string ReadTextInArchive()
         {
-            if (!File.Exists(ruta))
+            if (File.Exists(ruta))
             {
                 return File.ReadAllText(ruta);
             }
-            return File.ReadAllText(ruta);
+            return "[]"; // Retorna un JSON vacío si el archivo no existe
         }
 
         public List<T> Read()
