@@ -47,3 +47,9 @@ p.Text {
     background-image: url('../Images/Empty.jpg');
     background-size: cover;
 }
+#footerP {
+    color: black;
+    text-align: initial;
+    display: inline-block;
+    font-size: 20px;
+}
