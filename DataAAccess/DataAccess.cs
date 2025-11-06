@@ -11,7 +11,7 @@ namespace AutomotiveMB.DataAccess
             ruta = $"Data/{nombreArchivo}.json";
         }
 
-        private string ReadTextArchive()
+        private string ReadTextInArchive()
         {
             if (!File.Exists(ruta))
             {
@@ -22,7 +22,7 @@ namespace AutomotiveMB.DataAccess
 
         public List<T> Read()
         {
-            string json = ReadTextArchive();
+            string json = ReadTextInArchive();
             var lista = JsonSerializer.Deserialize<List<T>>(json);
             return lista ?? new List<T>();
         }
