@@ -6,29 +6,24 @@ using AutomotiveMB.Services;
 using AutomotiveMB.Helpers;
 using AutomotiveMB.Repositories;
 using AutomotiveMB.Data;
-using AutomotiveMB.Pages;
+using AutomotiveMB.Pages.Vehicles;
+
 
 namespace AutomotiveMB.Pages.ClientCreate
 {
-    public class EditClientModel : PageModel
+    public class CreateClientModel : PageModel
     {
         [BindProperty]
-        public Client? client { get; set; }
+        public Client Client { get; set; }
         private readonly ServiceClient service;
-        public EditClientModel()
+        public CreateClientModel()
         {
             IDataAccess<Client> acceso = new DataAccess<Client>("clients)");
             IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
             service = new ServiceClient(repo);
         }
-
-        public void OnGet(int id)
+        public void OnGet()
         {
-            Client? client = service.GetForId(id);
-            if (client != null)
-            {
-                Client = client;
-            }
         }
 
         public IActionResult OnPost()
@@ -37,7 +32,8 @@ namespace AutomotiveMB.Pages.ClientCreate
             {
                 return Page();
             }
-            service.Edit(Client);
+
+            service.Add(Client);
             return RedirectToPage("IndexClient");
         }
     }

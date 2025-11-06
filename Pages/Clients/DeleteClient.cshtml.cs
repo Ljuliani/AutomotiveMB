@@ -8,7 +8,7 @@ using AutomotiveMB.Repositories;
 using AutomotiveMB.Data;
 using AutomotiveMB.Pages;
 
-namespace AutomotiveMB.Pages.Client
+namespace AutomotiveMB.Pages.ClientCreate
 {
     public class DeleteClientModel : PageModel
     {
