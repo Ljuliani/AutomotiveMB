@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 
 namespace AutomotiveMB.Models
 {
@@ -25,3 +25,4 @@ namespace AutomotiveMB.Models
         public string State { get; set; }
     }
 }
+*/
