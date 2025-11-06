@@ -20,3 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#principal-section {
+    background-image: url('../Images/Brend-Cars.png');
+    background-size: cover;
+}
+
+h1.Principal-text {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+}
+
+p.Text {
+    color: black;
+}
+
