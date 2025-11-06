@@ -42,3 +42,8 @@ p.Text {
     background-color: rgba(255, 255, 255, 0.7);
     display: inline-block;
 }
+
+.PBody {
+    background-image: url('../Images/Empty.jpg');
+    background-size: cover;
+}
