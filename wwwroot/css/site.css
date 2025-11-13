@@ -53,3 +53,65 @@ p.Text {
     display: inline-block;
     font-size: 20px;
 }
+
+/*PopUp and Images*/
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.car-card {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+    .car-card img {
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+        .car-card img:hover {
+            transform: scale(1.05);
+        }
+
+/* Popup */
+#popup.popup-hidden {
+    display: none !important;
+}
+
+#popup {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 520px;
+    width: calc(100% - 40px);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}

@@ -29,6 +29,29 @@
         <p>Explore a wide range of vehicles, from classic models to the latest releases. Whether you're a car enthusiast or just looking for your next ride, we have something for everyone.</p>
         <p>Join us on a journey through the world of automobiles and find the perfect car that suits your style and needs.</p>
     </div>
+     <!-- Galería -->
+        <section id="CarGallery">
+            <div class="gallery-container">
+                <button class="car-card" data-info="Volkswagen Taos – A compact SUV with modern design, spacious interior, and advanced technology. Perfect for drivers seeking comfort and safety.">
+                    <img src="~/images/car1.jpg" alt="Volkswagen Taos">
+                </button>
+                <button class="car-card" data-info="Volkswagen Up! – A small urban hatchback, agile and practical for city driving. Economical, safe, and easy to park.">
+                    <img src="~/images/car2.jpg" alt="Volkswagen Up!">
+                </button>
+                <button class="car-card" data-info="Ford Explorer – An iconic mid-size SUV offering seating for up to seven passengers, strong performance, and versatility for both family trips and adventure.">
+                    <img src="~/images/car3.jpg" alt="Ford Explorer">
+                </button>
+            </div>
+        </section>
+
+    <!-- Popup -->
+        <div id="popup" class="popup-hidden" aria-hidden="true">
+        <div class="popup-content" role="dialog" aria-modal="true">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div id="popup-text"></div>
+        </div>
 </section>
+</html>
+<script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>
