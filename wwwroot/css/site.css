@@ -116,13 +116,62 @@ p.Text {
     background: transparent;
 }
 
+/* Contact Section */
+#contact {
+    background: #f8f9fa;
+    padding: 60px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-.sm {
-    background-color: dimgrey;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+    /* Title */
+    #contact h4 {
+        color: #0d47a1; 
+        font-weight: 600;
+        margin-bottom: 20px;
+        border-left: 4px solid #0d47a1;
+        padding-left: 10px;
+    }
+
+/* Logo */
+#Logo {
+    max-width: 80%;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Inputs y text area */
+#contact .form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+    #contact .form-control:focus {
+        border-color: #0d47a1;
+        box-shadow: 0 0 8px rgba(13,71,161,0.3);
+    }
+
+/* Button */
+#contact .btn {
+    background: #0d47a1;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
     border: none;
-    transition: background-color 0.3s ease;
+}
+
+    #contact .btn:hover {
+        background: #1565c0; 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+/* Responsive Settings */
+@media (max-width: 768px) {
+    #Logo {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
