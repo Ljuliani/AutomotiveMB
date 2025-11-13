@@ -2,6 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
 // Estado del popup
 const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");

@@ -54,7 +54,7 @@ p.Text {
     font-size: 20px;
 }
 
-/*PopUp and Images*/
+/* Images */
 .gallery-container {
     display: flex;
     justify-content: center;

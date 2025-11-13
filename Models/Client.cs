@@ -22,6 +22,6 @@ namespace AutomotiveMB.Models
         public string? Telefono { get; set; }
         [Display(Name = "Birth Date")]
         [Required(ErrorMessage = "Enter your Birth Date")]
-        public string? FechaNacimiento { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
     }
 }
