@@ -40,9 +40,9 @@ document.addEventListener("keydown", (e) => {
     }
 });
     function sendEmail() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const mailtoLink = `mailto:nicolasemanuelpuerta1998@gmail.com?subject=Mensaje de ${name}&body=${email}%0A%0A${message}`;
+    const name = document.getElementById('Subject').value;
+    const email = document.getElementById('Commentary').value;
+    const message = document.getElementById('Message').value;
+    const mailtoLink = `mailto:nicolasemanuelpuerta1998@gmail.com?subject= ${name}&body=${email}%0A%0A${message}`;
     window.location.href = mailtoLink;
     }
