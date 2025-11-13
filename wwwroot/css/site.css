@@ -115,3 +115,14 @@ p.Text {
     border: none;
     background: transparent;
 }
+
+
+.sm {
+    background-color: dimgrey;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+    border: none;
+    transition: background-color 0.3s ease;
+}

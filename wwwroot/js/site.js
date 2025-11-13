@@ -39,3 +39,10 @@ document.addEventListener("keydown", (e) => {
         popup.setAttribute("aria-hidden", "true");
     }
 });
+    function sendEmail() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const mailtoLink = `mailto:nicolasemanuelpuerta1998@gmail.com?subject=Mensaje de ${name}&body=${email}%0A%0A${message}`;
+    window.location.href = mailtoLink;
+    }
