@@ -135,7 +135,8 @@ p.Text {
 /* Logo */
 #Logo {
     max-width: 80%;
-    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+    background: white; /* si querés que se vea con fondo */
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
 }
 
 /* Inputs y text area */
