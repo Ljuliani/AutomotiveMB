@@ -39,6 +39,7 @@ document.addEventListener("keydown", (e) => {
         popup.setAttribute("aria-hidden", "true");
     }
 });
+// Enviar correo electrónico
     function sendEmail() {
     const name = document.getElementById('Subject').value;
     const message = document.getElementById('Message').value;
