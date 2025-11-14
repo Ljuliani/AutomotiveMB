@@ -52,11 +52,15 @@ p.Text {
     background-size: cover;
    
 }
+.VBackground{
+    background-image: url('../Images/FondoVehículo.jpg');
+    background-size: cover;
+}
 .table{
     background-color: rgba(255, 255, 255, 0.7);
 }
 .my-red-btn {
-    background-color: #e60000; /* rojo personalizado */
+    background-color: #e60000; 
     color: white;
 }
 #footerP {
