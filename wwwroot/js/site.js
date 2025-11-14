@@ -41,8 +41,7 @@ document.addEventListener("keydown", (e) => {
 });
     function sendEmail() {
     const name = document.getElementById('Subject').value;
-    const email = document.getElementById('Commentary').value;
     const message = document.getElementById('Message').value;
-    const mailtoLink = `mailto:nicolasemanuelpuerta1998@gmail.com?subject= ${name}&body=${email}%0A%0A${message}`;
+    const mailtoLink = `mailto:nicolasemanuelpuerta1998@gmail.com?subject= ${name}%0A%0A${message}`;
     window.location.href = mailtoLink;
     }
