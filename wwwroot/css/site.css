@@ -49,15 +49,15 @@ p.Text {
 }
 .CBackground {
     background-image: url('../Images/FondoCliente.jpg');
-    background-size: cover;
+    background-size:  contain;
    
 }
-.VBackground{
-    background-image: url('../Images/FondoVehículo.jpg');
-    background-size: cover;
+.VBackground {
+    background-image: url('../Images/otro.jpg');
+    background-size: contain;
 }
 .table{
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: white;
 }
 .my-red-btn {
     background-color: #e60000; 
