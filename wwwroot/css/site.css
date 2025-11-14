@@ -64,10 +64,12 @@ p.Text {
     color: white;
 }
 #footerP {
-    color: black;
+    color: white;
     text-align: initial;
-    display: inline-block;
+    display: unset;
     font-size: 20px;
+    background-color: black;
+    background-size: auto;
 }
 
 /* Images */
