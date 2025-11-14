@@ -1,0 +1,46 @@
+﻿@page
+@model AutomotiveMB.Pages.CreateVehicle.IndexVehicleModel
+@{
+    ViewData["Title"] = "Vehicles";
+}
+
+<a asp-page="CreateVehicle" class="btn btn-success mb-3" ab-3>Add vehicle</a>
+@if (Model.Vehicles.Count == 0)
+{
+    <p>No vehicles are loaded</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Weight</th>
+                <th>State</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehicle in Model.Vehicles)
+            {
+                <tr>
+                    <td>@vehicle.Id</td>
+                    <td>@vehicle.Color</td>
+                    <td>@vehicle.Model</td>
+                    <td>@vehicle.Year</td>
+                    <td>@vehicle.Price</td>
+                    <td>@vehicle.Weight</td>
+                    <td>@vehicle.State</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@vehicle.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <a asp-page="Delete" asp-route-id="@vehicle.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

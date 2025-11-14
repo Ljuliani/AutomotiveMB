@@ -1,0 +1,38 @@
+﻿@page
+@model AutomotiveMB.Pages.CreateVehicle.DeleteModel
+@{
+}
+
+<input type="hidden" asp-for="Vehicle.Id" />
+
+<form method="post">
+    <h4> Are you sure you want to delete the Vehicle?</h4>
+
+    <div>
+        <strong>Model:</strong>@Model.Vehicle.Model
+    </div>
+
+    <div>
+        <strong>Year:</strong>@Model.Vehicle.Year
+    </div>
+
+    <div>
+        <strong>Color:</strong>@Model.Vehicle.Color
+    </div>
+
+    <div>
+        <strong>Price:</strong>@Model.Vehicle.Price
+    </div>
+
+    <div>
+        <strong>Weight:</strong>@Model.Vehicle.Weight
+    </div>
+
+    <div>
+        <strong>State:</strong>@Model.Vehicle.State
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
