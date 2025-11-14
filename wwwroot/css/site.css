@@ -47,6 +47,18 @@ p.Text {
     background-image: url('../Images/Empty.jpg');
     background-size: cover;
 }
+.CBackground {
+    background-image: url('../Images/FondoCliente.jpg');
+    background-size: cover;
+   
+}
+.table{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.my-red-btn {
+    background-color: #e60000; /* rojo personalizado */
+    color: white;
+}
 #footerP {
     color: black;
     text-align: initial;

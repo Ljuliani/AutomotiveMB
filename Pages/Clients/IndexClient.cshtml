@@ -4,13 +4,24 @@
     ViewData["Title"] = "Clients";
 }
 
-<a asp-page="ClientCreate" class="btn btn-success mb-3">Add Client</a>
+<a asp-page="ClientCreate" class="btn my-red-btn mb-3">Add Client</a>
 @if (Model.Clients.Count == 0)
 {
     <p>No clients are loaded</p>
 }
 else
 {
+ <!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <!--Fonts-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+        <title>AutomotiveMB</title>
+    </head>
+
+    <body class="CBackground">
     <table class="table">
         <thead>
             <tr>
@@ -43,4 +54,6 @@ else
             }
         </tbody>
     </table>
+    </body>
+    </html>
 }
