@@ -2,7 +2,7 @@
 
 namespace AutomotiveMB.Models
 {
-    public class Vehicle
+    public class Vehicle : IIdentificable
     {
         public int Id { get; set; }
         [Display(Name = "Model")]

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Vehicles";
 }
 
-<a asp-page="ClientCreate" class="btn my-red-btn mb-3">Add vehicle</a>
+<a asp-page="CreateVehicle" class="btn my-red-btn mb-3">Add vehicle</a>
 @if (Model.Vehicles.Count == 0)
 {
     <p>No vehicles are loaded</p>
@@ -39,8 +39,8 @@ else
             {
                 <tr>
                     <td>@vehicle.Id</td>
-                    <td>@vehicle.Color</td>
                     <td>@vehicle.Model</td>
+                    <td>@vehicle.Color</td>
                     <td>@vehicle.Year</td>
                     <td>@vehicle.Price</td>
                     <td>@vehicle.Weight</td>

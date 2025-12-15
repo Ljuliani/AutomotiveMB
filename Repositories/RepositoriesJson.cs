@@ -1,9 +1,10 @@
 ﻿using AutomotiveMB.DataAAccess;
+using AutomotiveMB.Models;
 using System.Text.Json;
 
 namespace AutomotiveMB.Repositories
 {
-    public class RepositoriesJson <T> : IRepositories<T> where T : class
+    public class RepositoriesJson <T> : IRepositories<T> where T : class, IIdentificable
     {
         private readonly IDataAccess<T> _acceso;
 
