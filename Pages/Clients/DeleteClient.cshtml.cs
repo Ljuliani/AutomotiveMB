@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using AutomotiveMB.Models;
 using AutomotiveMB.DataAAccess;
 using AutomotiveMB.Services;
-using AutomotiveMB.Helpers;
 using AutomotiveMB.Repositories;
 using AutomotiveMB.Data;
-using AutomotiveMB.Pages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AutomotiveMB.Pages.ClientCreate
 {
@@ -15,11 +14,16 @@ namespace AutomotiveMB.Pages.ClientCreate
         [BindProperty]
         public Client Client { get; set; }
         private readonly ServiceClient service;
+        private readonly ServiceVehicle vehicleService;
         public DeleteClientModel()
         {
-            IDataAccess<Client> acceso = new DataAccess<Client>("clients");
-            IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
-            service = new ServiceClient(repo);
+            IDataAccess<Client> accesoClient = new DataAccess<Client>("clients");
+            IRepositories<Client> repoClient = new RepositoriesJson<Client>(accesoClient);
+            service = new ServiceClient(repoClient);
+
+            IDataAccess<Vehicle> accesoVehicle = new DataAccess<Vehicle>("vehicles");
+            IRepositories<Vehicle> repoVehicle = new RepositoriesJson<Vehicle>(accesoVehicle);
+            vehicleService = new ServiceVehicle(repoVehicle);
         }
         public IActionResult OnGet(int id)
         {
@@ -32,8 +36,22 @@ namespace AutomotiveMB.Pages.ClientCreate
             Client = client;
             return Page();
         }
-        public IActionResult OnPost(int id)
+        public IActionResult OnPost()
         {
+            Client = service.GetForId(Client.Id);
+            if (Client == null)
+            {
+                ModelState.AddModelError(string.Empty, "El cliente no existe.");
+                return Page();
+            }
+
+            // Verifica si el cliente tiene un vehículo asociado
+            if (Client.VehicleId != null)
+            {
+                ModelState.AddModelError(string.Empty, "No se puede eliminar el cliente porque tiene un vehículo asociado.");
+                return Page();
+            }
+
             service.Delete(Client);
             return RedirectToPage("IndexClient");
         }
