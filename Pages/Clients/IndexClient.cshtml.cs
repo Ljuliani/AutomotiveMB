@@ -3,8 +3,6 @@ using AutomotiveMB.Models;
 using AutomotiveMB.DataAAccess;
 using AutomotiveMB.Services;
 using AutomotiveMB.Repositories;
-using AutomotiveMB.Data;
-using AutomotiveMB.Pages;
 
 namespace AutomotiveMB.Pages.ClientCreate
 {
