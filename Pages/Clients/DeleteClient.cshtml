@@ -3,9 +3,19 @@
 @{
 }
 
-<input type="hidden" asp-for="Client.Id" />
+
 
 <form method="post">
+    <input type="hidden" asp-for="Client.Id" />
+    <input type="hidden" asp-for="Client.Nombre" />
+    <input type="hidden" asp-for="Client.Apellido" />
+    <input type="hidden" asp-for="Client.Dni" />
+    <input type="hidden" asp-for="Client.FechaNacimiento" />
+    <input type="hidden" asp-for="Client.Email" />
+    <input type="hidden" asp-for="Client.Telefono" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
     <h4> Are you sure you want to delete the customer? </h4>
 
     <div>
@@ -36,3 +46,5 @@
     <button type="submit" class="btn btn-danger">Delete</button>
     <a asp-page="IndexClient" class="btn btn-secondary">Cancel</a>
 </form>
+
+<partial name="_ValidationScriptsPartial" />

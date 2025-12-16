@@ -48,7 +48,7 @@ namespace AutomotiveMB.Pages.ClientCreate
             // Verifica si el cliente tiene un vehículo asociado
             if (Client.VehicleId != null)
             {
-                ModelState.AddModelError(string.Empty, "No se puede eliminar el cliente porque tiene un vehículo asociado.");
+                ModelState.AddModelError(string.Empty, "The customer cannot be removed because they have an associated vehicle.");
                 return Page();
             }
 
