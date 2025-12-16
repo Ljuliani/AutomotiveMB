@@ -23,5 +23,10 @@ namespace AutomotiveMB.Models
         [Display(Name = "Birth Date")]
         [Required(ErrorMessage = "Enter your Birth Date")]
         public DateTime? FechaNacimiento { get; set; }
+
+        public int? VehicleId { get; set; }
+        public Vehicle? Vehicle { get; set; }
+
+
     }
 }

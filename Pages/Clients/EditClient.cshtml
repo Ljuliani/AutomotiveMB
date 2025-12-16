@@ -36,5 +36,13 @@
         <span asp-validation-for="Client.Telefono" class="text-danger"></span>
     </div>
 
+    <div class="form-group">
+        <label asp-for="Client.VehicleId">Looking for Vehicle (optional)</label>
+        <select asp-for="Client.VehicleId" asp-items="Model.Vehicles" class="form-control">
+            <option value="">-- Abierto a opciones --</option>
+        </select>
+        <span asp-validation-for="Client.VehicleId" class="text-danger"></span>
+    </div>
+
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

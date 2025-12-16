@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using AutomotiveMB.Models;
 using AutomotiveMB.DataAAccess;
 using AutomotiveMB.Services;
-using AutomotiveMB.Helpers;
 using AutomotiveMB.Repositories;
 using AutomotiveMB.Data;
-using AutomotiveMB.Pages.Vehicles;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AutomotiveMB.Pages.ClientCreate
 {
@@ -15,21 +13,37 @@ namespace AutomotiveMB.Pages.ClientCreate
     {
         [BindProperty]
         public Client Client { get; set; }
+
         private readonly ServiceClient service;
+        private readonly ServiceVehicle vehicleService;
+
+        // Lista de vehículos para la vista
+        public SelectList Vehicles { get; set; } = default!;
+
         public ClientCreateModel()
         {
-            IDataAccess<Client> acceso = new DataAccess<Client>("clients");
-            IRepositories<Client> repo = new RepositoriesJson<Client>(acceso);
-            service = new ServiceClient(repo);
+            IDataAccess<Client> accesoClient = new DataAccess<Client>("clients");
+            IRepositories<Client> repoClient = new RepositoriesJson<Client>(accesoClient);
+            service = new ServiceClient(repoClient);
+
+            IDataAccess<Vehicle> accesoVehicle = new DataAccess<Vehicle>("vehicles");
+            IRepositories<Vehicle> repoVehicle = new RepositoriesJson<Vehicle>(accesoVehicle);
+            vehicleService = new ServiceVehicle(repoVehicle);
         }
+
         public void OnGet()
         {
+            var vehicles = vehicleService.GetAll();
+            Vehicles = new SelectList(vehicles, nameof(Vehicle.Id), nameof(Vehicle.Model));
         }
 
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
+                // Recargar lista si hay error
+                var vehicles = vehicleService.GetAll();
+                Vehicles = new SelectList(vehicles, nameof(Vehicle.Id), nameof(Vehicle.Model));
                 return Page();
             }
 

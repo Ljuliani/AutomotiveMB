@@ -1,5 +1,6 @@
 ﻿@page
 @model AutomotiveMB.Pages.ClientCreate.IndexClientModel
+
 @{
     ViewData["Title"] = "Clients";
 }
@@ -32,6 +33,7 @@ else
                 <th>Dni</th>
                 <th>Email</th>
                 <th>Phone Number</th>
+                <th>Looking for</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -46,6 +48,24 @@ else
                     <td>@client.Dni</td>
                     <td>@client.Email</td>
                     <td>@client.Telefono</td>
+                    <td>
+                        @if (client.VehicleId.HasValue)
+                        {
+                            var vid = client.VehicleId.Value;
+                            if (Model.VehiclesMap != null && Model.VehiclesMap.TryGetValue(vid, out var veh) && !string.IsNullOrEmpty(veh?.Model))
+                            {
+                                @($"{veh.Model}")
+                            }
+                            else
+                            {
+                                <text>Vehicle ID: @vid</text>
+                            }
+                        }
+                        else
+                        {
+                            <text>Open to options</text>
+                        }
+                    </td>
                     <td>
                         <a asp-page="EditClient" asp-route-id="@client.Id" class="btn btn-primary btn-sm">Edit</a>
                         <a asp-page="DeleteClient" asp-route-id="@client.Id" class="btn btn-danger btn-sm">Delete</a>
